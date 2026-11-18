@@ -10,6 +10,46 @@ optimising latency, task completion, and energy efficiency. A key contribution i
 explicit SLA Violation Risk Score (SVRS) into the DRL state and reward design, enabling proactive and
 safe scheduling decisions.
 
+## Hướng dẫn cài đặt và chạy dự án
+
+**Bước 1: Kiểm tra Python và cài công cụ cần thiết**
+Đảm bảo máy tính đang dùng Python từ bản **3.9** đến **3.12**, sau đó cài đặt thêm `venv`, `pip` và `git` nếu chưa có:
+```bash
+python3 --version
+sudo apt update
+sudo apt install -y python3-venv python3-pip git
+```
+
+**Bước 2: Tải code về máy**
+Clone dự án và di chuyển vào thư mục chứa mã nguồn (đảm bảo thấy các file `main.py`, `env.py`, `model.py`, `requirements.txt`,... Từ đây mọi lệnh đều chạy trong thư mục này):
+```bash
+cd ~
+git clone [https://github.com/tuantimol/drl-task-scheduler.git](https://github.com/tuantimol/drl-task-scheduler.git)
+cd drl-task-scheduler
+ls
+```
+
+**Bước 3: Tạo môi trường ảo và cài thư viện**
+*(Lưu ý: Sau khi kích hoạt, đầu dòng lệnh sẽ có chữ `(venv)` và bạn cần chạy lại `source venv/bin/activate` mỗi khi mở terminal mới. Quá trình cài `torch` có thể mất vài phút; nếu `gym` báo lỗi thì có thể bỏ qua vì `main.py` không dùng đến).*
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+pip install notebook
+```
+
+**Bước 4: Kiểm tra cài đặt**
+Chạy lệnh kiểm tra nhanh, nếu màn hình in ra `OK` kèm số phiên bản PyTorch là hoàn tất:
+```bash
+python -c "import torch, numpy, matplotlib; print('OK', torch.__version__)"
+```
+
+**Bước 5: Mở Jupyter Notebook**
+```bash
+jupyter notebook
+```
+
 # 🔹 Key Features
 
 SLA Violation Risk Score (SVRS)–based state representation
