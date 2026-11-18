@@ -24,7 +24,7 @@ sudo apt install -y python3-venv python3-pip git
 Clone dự án và di chuyển vào thư mục chứa mã nguồn (đảm bảo thấy các file `main.py`, `env.py`, `model.py`, `requirements.txt`,... Từ đây mọi lệnh đều chạy trong thư mục này):
 ```bash
 cd ~
-git clone [https://github.com/tuantimol/drl-task-scheduler.git](https://github.com/tuantimol/drl-task-scheduler.git)
+git clone https://github.com/tuantimol/drl-task-scheduler.git
 cd drl-task-scheduler
 ls
 ```
